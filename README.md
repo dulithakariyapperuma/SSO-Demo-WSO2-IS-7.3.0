@@ -4,7 +4,7 @@
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Step 1 — Start WSO2 Identity Server 7.3
 
@@ -63,7 +63,7 @@ Open: **http://localhost:5173**
 
 ---
 
-## 📋 Features
+## Features
 
 | Feature | Details |
 |---------|---------|
@@ -78,7 +78,7 @@ Open: **http://localhost:5173**
 
 ---
 
-## 🔗 WSO2 IS 7.3 OIDC Endpoints
+## WSO2 IS 7.3 OIDC Endpoints
 
 | Endpoint | URL |
 |----------|-----|
@@ -92,7 +92,7 @@ Open: **http://localhost:5173**
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **React 19** + **Vite** — SPA framework
 - **@asgardeo/auth-react** — Official WSO2/Asgardeo React SDK
@@ -101,7 +101,7 @@ Open: **http://localhost:5173**
 
 ---
 
-## ⚠️ Self-Signed Certificate Note
+## Self-Signed Certificate Note
 
 WSO2 IS 7.3 uses a self-signed SSL certificate by default. To avoid browser SSL errors:
 
@@ -111,7 +111,7 @@ WSO2 IS 7.3 uses a self-signed SSL certificate by default. To avoid browser SSL 
 
 ---
 
-## 📚 References
+## References
 
 - [WSO2 IS 7.3 Docs](https://is.docs.wso2.com/en/7.3.0/)
 - [Asgardeo React SDK](https://github.com/asgardeo/asgardeo-auth-react-sdk)
