@@ -1,0 +1,296 @@
+/* ──────────────────────────────────────────────
+   LandingPage.css — OCBC SSO Demo Landing styles
+   ────────────────────────────────────────────── */
+
+.landing {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 24px;
+  background: #0a0e1a;
+}
+
+/* ── Animated background orbs ── */
+.landing__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.landing__orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orbFloat 8s ease-in-out infinite;
+}
+
+.landing__orb--1 {
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(200, 16, 46, 0.35), transparent 70%);
+  top: -150px;
+  right: -100px;
+  animation-duration: 9s;
+}
+
+.landing__orb--2 {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(139, 0, 0, 0.25), transparent 70%);
+  bottom: -120px;
+  left: -80px;
+  animation-duration: 11s;
+  animation-delay: -3s;
+}
+
+.landing__orb--3 {
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 80, 80, 0.15), transparent 70%);
+  top: 40%;
+  left: 35%;
+  animation-duration: 7s;
+  animation-delay: -1.5s;
+}
+
+@keyframes orbFloat {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-30px) scale(1.05); }
+}
+
+/* ── Glass card ── */
+.landing__card {
+  position: relative;
+  width: 100%;
+  max-width: 460px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 40px 36px;
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 0 0 1px rgba(200, 16, 46, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  animation: cardFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes cardFadeIn {
+  from { opacity: 0; transform: translateY(32px) scale(0.96); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Header ── */
+.landing__header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.landing__logo {
+  flex-shrink: 0;
+  filter: drop-shadow(0 4px 12px rgba(200, 16, 46, 0.5));
+}
+
+.landing__header-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.landing__brand {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.landing__tagline {
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 2px 0 0;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+/* ── Divider ── */
+.landing__divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(200, 16, 46, 0.4), transparent);
+  margin-bottom: 28px;
+}
+
+/* ── Hero ── */
+.landing__hero {
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.landing__shield {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 16px;
+  animation: shieldPulse 3s ease-in-out infinite;
+}
+
+@keyframes shieldPulse {
+  0%, 100% { filter: drop-shadow(0 0 12px rgba(200, 16, 46, 0.4)); transform: scale(1); }
+  50% { filter: drop-shadow(0 0 24px rgba(200, 16, 46, 0.7)); transform: scale(1.04); }
+}
+
+.landing__title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 8px;
+  letter-spacing: -0.03em;
+}
+
+.landing__subtitle {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 16px;
+}
+
+.landing__highlight {
+  color: #ff6b6b;
+  font-weight: 600;
+}
+
+.landing__description {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.45);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Feature badges ── */
+.landing__features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.landing__feature {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.7);
+  transition: all 0.2s ease;
+}
+
+.landing__feature:hover {
+  background: rgba(200, 16, 46, 0.1);
+  border-color: rgba(200, 16, 46, 0.25);
+  color: #fff;
+}
+
+.landing__feature-icon {
+  font-size: 1.1rem;
+}
+
+/* ── CTA Button ── */
+.landing__cta {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 24px;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: inherit;
+  color: #fff;
+  background: linear-gradient(135deg, #C8102E 0%, #8B0000 100%);
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow:
+    0 4px 24px rgba(200, 16, 46, 0.45),
+    0 1px 0 rgba(255, 255, 255, 0.15) inset;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.landing__cta::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,0.12), transparent);
+  opacity: 0;
+  transition: opacity 0.25s;
+}
+
+.landing__cta:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 8px 32px rgba(200, 16, 46, 0.6),
+    0 1px 0 rgba(255, 255, 255, 0.2) inset;
+}
+
+.landing__cta:hover::before { opacity: 1; }
+
+.landing__cta:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 16px rgba(200, 16, 46, 0.4);
+}
+
+.landing__cta-icon {
+  display: flex;
+  align-items: center;
+}
+
+.landing__footer-text {
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.35);
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+/* ── WSO2 Badge ── */
+.landing__wso2-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-size: 0.7rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 0.03em;
+}
+
+.landing__wso2-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #4caf50;
+  box-shadow: 0 0 6px #4caf50;
+  animation: dotPulse 2s ease-in-out infinite;
+}
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Bottom note ── */
+.landing__bottom-note {
+  position: relative;
+  margin-top: 24px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+}

@@ -1,0 +1,40 @@
+.config-banner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, rgba(255, 152, 0, 0.95), rgba(255, 87, 34, 0.95));
+  color: #fff;
+  font-size: 0.82rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(255, 152, 0, 0.3);
+}
+
+.config-banner__icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.config-banner__text {
+  flex: 1;
+}
+
+.config-banner__text code {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: 0.78rem;
+}
+
+.config-banner__link {
+  color: #fff;
+  text-decoration: underline;
+  opacity: 0.85;
+}
+
+.config-banner__link:hover { opacity: 1; }
